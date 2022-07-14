@@ -35,9 +35,8 @@ jobs:
       # Runs a single command using the runners shell
       - name: yarn
         run: yarn run test --forceExit
-        with:
-          BUILDKITE_ANALYTICS_TOKEN: ${{ secrets.BUILDKITE_ANALYTICS_TOKEN }}
         env:
+          BUILDKITE_ANALYTICS_TOKEN: ${{ secrets.BUILDKITE_ANALYTICS_TOKEN }}
           DB_DRIVER: postgres
 
       - name: uploader
